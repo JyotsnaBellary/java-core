@@ -1,0 +1,34 @@
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+
+//FILL YOUR CODE
+
+public class UserDAO {
+	public void insert(User user) {
+		//FILL YOUR CODE
+		
+		SessionFactory factory = HibernateUtil.getSessionFactory();
+		
+		Session session = factory.openSession();
+        Transaction t = session.beginTransaction();
+        //Persistant state
+        session.save(user);
+        t.commit();
+        factory.close();
+	}
+	
+
+//	public List<User> list(){
+//		//FILL YOUR CODE
+//		HibernateUtil hibernateUtil = new HibernateUtil();
+//		SessionFactory factory = hibernateUtil.getSessionFactory();
+//		
+//		Session session = factory.openSession();
+//		Criteria cr = session.createCriteria(User.class);
+//		List result = cr.list();
+//	}
+}
+

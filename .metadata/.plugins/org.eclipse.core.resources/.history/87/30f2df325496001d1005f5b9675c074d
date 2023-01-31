@@ -1,0 +1,21 @@
+public class Event extends Thread{
+	//Your code here	
+	String entry;
+
+	public String getEntry() {
+		return entry;
+	}
+
+	public void setEntry(String entry) {
+		this.entry = entry;
+	}
+
+	public Event(String entry) {
+		super();
+		this.entry = entry;
+	}
+	
+	public void run() {
+		
+	}
+}

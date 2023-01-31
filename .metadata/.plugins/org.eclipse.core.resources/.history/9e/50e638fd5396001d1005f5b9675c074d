@@ -1,0 +1,8 @@
+public class EventBO {
+	//Your code here
+	static Integer currentPeopleCount = 0;
+	
+	public static void processEvent(String enterType) {
+		String[] entry = enterType.split(","); 
+	}
+}

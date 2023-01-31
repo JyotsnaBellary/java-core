@@ -1,0 +1,16 @@
+import org.hibernate.SessionFactory;
+
+//FILL YOUR CODE
+
+public class UserDAO {
+	public void insert(User user) {
+		//FILL YOUR CODE
+		HibernateUtil hibernateUtil = new HibernateUtil();
+		SessionFactory factory = hibernateUtil.getSessionFactory();
+	}
+	
+	public List<User> list(){
+		//FILL YOUR CODE
+	}
+}
+

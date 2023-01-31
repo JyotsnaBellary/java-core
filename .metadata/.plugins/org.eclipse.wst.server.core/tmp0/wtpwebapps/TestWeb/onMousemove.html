@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+div {
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: lightblue;
+}
+#myDIV{
+width: 200px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: pink;
+}
+#EmyDIV{
+width: 200px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+	<p>This example demonstrates how to assign an "onmousemove" event to a div element.</p>
+	<p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
+	<hr>
+	
+	<div onmousemove="myFunction(event)"></div>
+	<p>In HTML:</p>
+	
+	<hr>
+	<script>
+	function myFunction(e) {
+	  var x = e.clientX;
+	  var y = e.clientY;
+	  var coordinate = "The mouse is moved inside the division";
+	  document.getElementById("demo").innerHTML = coordinate;
+	}
+	</script>
+	<!--  -->
+	
+	<p>In JavaScript:</p>
+	<div id="myDIV"></div>
+	<script>
+	document.getElementById("myDIV").onmousemove = function(event) {myFunction(event)};
+	</script>
+	<hr>
+	
+	<!--  -->
+		
+	<p>In JavaScript, using the addEventListener() method:</p>
+	<div id="EmyDIV"></div>
+	<script>
+	document.getElementById("EmyDIV").addEventListener("mousemove", function(event) {
+		  myFunction(event);
+		});
+	</script>
+	
+		<p id="demo"></p>
+</body>
+</html>

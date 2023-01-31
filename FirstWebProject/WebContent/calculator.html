@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EmployeeLoginForm</title>
+
+
+
+<style type="text/css">
+@import url("emp.css");
+
+
+
+.head {
+    border: 10em background-color: green;
+    font-style: italic;
+}
+</style>
+
+
+
+
+<script type="text/javascript">
+    function checkInterest() {
+
+
+
+       /* name=document.getElementById("uname").value;
+        password=document.getElementById("pwd").value; */
+        principleAmount = document.calculator.pamount.value;
+        time = document.calculator.time.value;
+        rate = document.calculator.rate.value;
+        var num = /^[0-9]+$/;
+
+
+
+       if (!principleAmount.match(num) || !time.match(num) || !rate.match(num)) {
+
+
+
+           alert("please enter digits onlys");
+            return false;
+
+
+
+       } else {
+            var si = 0;
+
+
+
+           si = (parseInt(principleAmount) * parseInt(time) * parseInt(rate)) / 100;
+
+
+
+           document.getElementById("result").innerHTML = '<font color="green">interest amount is</font> '
+                    + parseInt(si);
+
+
+
+           return false;
+        }
+        
+    }
+</script>
+</head>
+<body background="bosch.jfif">
+
+
+
+   <form name="calculator" onsubmit="return checkInterest()">
+
+
+
+
+        <table id="tab">
+            <tr>
+                <td>SimpleInterest Calculator</td>
+            </tr>
+            <tr>
+                <td>principal</td>
+                <td><input type="text" id="pamount" name="pamount"></td>
+            </tr>
+            <tr>
+                <td>time</td>
+                <td><input type="text" id="time" name="time"></td>
+            </tr>
+            <tr>
+                <td>rate</td>
+                <td><input type="text" id="rate" name="rate"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Calculate"></td>
+                <td align="center"><input type="reset"></td>
+            </tr>
+            
+            <tr><td><div id="result"></div></td></tr>
+
+
+
+       </table>
+
+
+
+       
+
+
+
+   </form>
+</body>
+</html>
+
+has context menu

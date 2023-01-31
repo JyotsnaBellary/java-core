@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+    function valid() {
+       var name = document.login.name.value;
+        var password = document.login.password.value;
+        if (name == "" || name == null||password==""|| password==null) {
+           alert("Please enter your username/password ");
+            return false;
+       }
+        else{
+        //alert("welcome "+name)    ;
+        return true;
+        }
+    }
+</script>
+<body>
+    <form action="result.html" name="login" onsubmit="return valid()"  >
+       UserName<input type="text" name="name" id="name"> <br>
+        Password<input type="password" name="password" id="pwd"> <input
+            type="submit" value="Login">
+    </form>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+    @import url("tr.css");
+</style>
+<script src ="tra.js">
+</script>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body align="center" background="S:\BatchTrackingSystem\web\bg.JPG" bgcolor="#80BFFF">
+
+
+
+         <h1 align="center" ><font color=#80DFFF>Trainee Register Form</font></h1>
+              
+             <!-- <img src="traineereg.png" align="middle" width="591" height="58" alt="Bodhi Batch Tracking System" /></h1>  -->
+                
+        <form method="post" name="trainer"  onSubmit="return validate();">
+           
+            <table   class="table1" class="wid">
+                <tr></tr>
+                <tr><td>TraineeIdNo</td><td><input type="text" name="traid" size="20" pattern="[a-zA-Z]{5,}" title ="please enter min 5 latters only" required></input></td></tr>
+                 <tr><td>RA Score</td><td><input type="text" name="ra-score" size="20"  pattern="[0-9]{2}" title="score between 10 to 99" required ></input></td></tr>
+                
+                <tr><td>BatchNo</td><td><select name="batch" >
+                    <option value="batch-07">Batch-07</option>
+                    <option value="batch-08">Batch-08</option>
+                    <option value="batch-09">Batch-09</option>
+                    <option value="batch-10">Batch-10</option>
+                    <option value="batch-11">Batch-11</option>
+                    <option value="batch-12">Batch-12</option>
+                    <option value="batch-13">Batch-13</option>
+                    <option value="batch-14">Batch-14</option>
+                    <option value="batch-15">Batch-15</option>
+                    <option value="batch-16">Batch-16</option>
+                    <option value="batch-17">Batch-17</option>
+                    <option value="batch-18">Batch-18</option>
+                </select></td></tr>
+                <tr><td>Name</td><td><input type="text" name="name"></input></td></tr>
+                <tr><td>LastName</td><td><input type="text" name="lname"></input></td></tr>
+                <tr><td>Gender</td>
+               <td><input type="radio" name="gender" value="male">Male</input><br>
+               <input type="radio" name="gender" value="female">FeMale</input></td></tr>
+                <tr><td>DOB</td><td><input type="text" name="dob" placeholder="dd/mm/yyyy" onfocus="this.value=''"></input><td>(DD/MM/YYYY)</td></td></tr>
+                
+                <tr><td>Qualification</td><td><select name="qual">
+                <option value="">select</option>
+                    <option value="BE-ECE">BE-ECE</option>
+                    <option value="BE-EEE">BE-EEE</option>
+                    <option value="BE-IT">BE-IT</option>
+                    <option value="BE-Mech">BE-Mech</option>
+                    <option value="BE-CS">BE-CS</option>
+                     <option value="BE-MicroBio">BE-MicroBio</option>
+                    <option value="BE-BioTechnology">BE-BioTechnology</option>
+                    <option value="BTech-ECE">BTech-ECE</option>
+                    <option value="BTech-EEE">BTech-EEE</option>
+                    <option value="BTech-IT">BTech-IT</option>
+                    <option value="BTech-Mech">BTech-Mech</option>
+                    <option value="BTech-CS">BTech-CS</option>
+                    <option value="BTech-AppliedEle&Inst">BTech-AppliedEle&Ins</option>
+                    <option value="BTech-MicroBio">BTech-MicroBio</option>
+                    <option value="BioTechnology">BTech-BioTechnology</option>
+                    <option value="MCA">MCA</option>
+                    <option value="Msc-comp">Msc-comp</option>
+                </select></td></tr>
+                <tr><td>College/University</td><td><input type="text" name="college" ></input></td></tr>
+                <tr><td>10th Marks</td><td><input type="text" name="tenth"></input></td></tr>
+                <tr><td>12th Marks</td><td><input type="text" name="twelth"></input></td></tr>
+                <tr><td>Degree Marks</td><td><input type="text" name="degree"></input></td></tr>
+                
+                <tr><td>DOJ</td><td><input type="text" name="doj" value="19-sep-2022"
+                     readonly></input><td>(DD/MM/YY)</td></td></tr>
+                <tr><td>MobileNo</td><td><input type="text" name="mobile"></input></td></tr>
+                <tr><td>EmailId</td><td><input type="text" name="email"></input></td></tr>
+                <tr><td>Father&<br>SiblingOccupation</td><td><textarea name="background" rows="2" cols="23" wrap="hard" onfocus="this.value=''"></textarea></td><td><br><i><b>ex:Father-Lecturer<br>Brother-SE</i></b></td></tr>
+                <tr><td>Address</td><td><textarea name="address" rows="2" cols="23"></textarea></td></tr>
+                <tr align="center"><td><input type="reset" name="sub" value="Reset"></input></td><td><input type="submit" class="submitbutton"name="sub" value="submit"></input></td></tr>
+                
+            </table>
+        </form>
+     </body>
+</html>

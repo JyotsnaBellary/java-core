@@ -1,0 +1,13 @@
+//FILL YOUR CODE
+
+public class UserDAO {
+	public void insert(User user) {
+		//FILL YOUR CODE
+		HibernateUtil factory
+	}
+	
+	public List<User> list(){
+		//FILL YOUR CODE
+	}
+}
+

@@ -1,0 +1,24 @@
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Logger log = Logger.getLogger("org.hibernate");
+		log.setLevel(Level.OFF);
+		System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
+        //Fill your code here
+		ApplicationContext context = new ClassPathXmlApplicationContext("./applicationContext.xml");
+//		
+		Book b1 = (Book) context.getBean("book1");
+		
+//		System.out.println("id:" + b1.getId());
+		System.out.println("namee:" + b1.getName());
+        
+	}
+
+}

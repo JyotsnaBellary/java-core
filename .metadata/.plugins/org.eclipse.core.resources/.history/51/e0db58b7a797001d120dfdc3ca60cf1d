@@ -1,0 +1,27 @@
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.basics.Employee;
+
+//FILL YOUR CODE
+
+public class UserDAO {
+	public void insert(User user) {
+		//FILL YOUR CODE
+		HibernateUtil hibernateUtil = new HibernateUtil();
+		SessionFactory factory = hibernateUtil.getSessionFactory();
+		
+		Session session = factory.openSession();
+        Transaction t = session.beginTransaction();
+        //Persistant state
+        session.save(emp);
+        t.commit();
+        factory.close();
+	}
+	
+	public List<User> list(){
+		//FILL YOUR CODE
+	}
+}
+
